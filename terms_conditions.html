@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BAvix Ally Group - Premier Recruiting Solutions</title>
+    <title>Bavix Ally Group - Premier Recruiting Solutions</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
+        <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
         
         * {
@@ -13,11 +13,12 @@
         }
         
         .gradient-bg {
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+            /* background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%); */
+            background: linear-gradient(135deg, #0A1550 0%, #0F1F74 50%, #3A4DBA 100%); 
         }
         
         .gradient-text {
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            background: linear-gradient(135deg, #0F1F74 0%, #3A4DBA 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -65,29 +66,59 @@
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
+        <!-- Navigation -->
     <nav class="bg-white nav-shadow fixed w-full top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
                 <div class="flex items-center space-x-3">
-                    <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                    <!-- <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
                         <span class="text-white font-bold text-xl">BA</span>
+                    </div> -->
+
+                    <div class="w-20 h-20 bg-white rounded-lg flex items-center justify-center overflow-hidden">
+                        <img 
+                            src="assets/Logo.jpg" 
+                            alt="Bavix Ally Group Logo"
+                            class="w-full h-full object-contain"
+                        />
                     </div>
+
                     <div>
-                        <h1 class="text-2xl font-bold text-gray-800">BAvix Ally Group</h1>
+                        <h1 class="text-2xl font-bold text-gray-800">Bavix Ally Group</h1>
                         <p class="text-xs text-gray-500">Premier Recruiting Solutions</p>
                     </div>
                 </div>
                 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-blue-600 font-semibold hover:text-blue-700 transition">Home</a>
-                    <a href="about_us.html" class="text-gray-700 hover:text-blue-600 transition">About Us</a>
-                    <a href="services.html" class="text-gray-700 hover:text-blue-600 transition">Services</a>
-                    <a href="#careers" class="text-gray-700 hover:text-blue-600 transition">Careers</a>
-                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
-                    <button class="bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 transition font-medium">Get Started</button>
+               <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 font-semibold hover:text-[#0A1550]/80 transition">
+                        Home
+                    </a>
+
+                    <a href="about_us.html" class="text-gray-700 hover:text-[#0A1550] transition">
+                        About Us
+                    </a>
+
+                    <a href="services.html" class="text-gray-700 hover:text-[#0A1550] transition">
+                        Services
+                    </a>
+
+                    <a href="careers.html" class="text-gray-700 hover:text-[#0A1550] transition">
+                        Careers
+                    </a>
+
+                    <a href="contact_us.html" class="text-gray-700 hover:text-[#0A1550] transition">
+                        Contact
+                    </a>
+
+                    <a href="contact_us.html">
+                    <button class="bg-[#0A1550] text-white px-6 py-2.5 rounded-lg hover:bg-[#0A1550]/90 transition font-medium">
+                        Get Started
+                    </button>
+                </a>
                 </div>
+
                 
                 <!-- Mobile Menu Button -->
                 <button id="mobile-menu-btn" class="md:hidden text-gray-700">
@@ -101,12 +132,12 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
             <div class="px-4 py-4 space-y-3">
-                <a href="#home" class="block text-blue-600 font-semibold py-2">Home</a>
-                <a href="#about" class="block text-gray-700 py-2">About Us</a>
-                <a href="#services" class="block text-gray-700 py-2">Services</a>
-                <a href="#careers" class="block text-gray-700 py-2">Careers</a>
-                <a href="#contact" class="block text-gray-700 py-2">Contact</a>
-                <button class="w-full bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 transition font-medium">Get Started</button>
+                <a href="index.html" class="block text-blue-600 font-semibold py-2">Home</a>
+                <a href="about_us.html" class="block text-gray-700 py-2">About Us</a>
+                <a href="services.html" class="block text-gray-700 py-2">Services</a>
+                <a href="careers.html" class="block text-gray-700 py-2">Careers</a>
+                <a href="contact_us.html" class="block text-gray-700 py-2">Contact</a>
+                <button class="w-full bg-[#0A1550] text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 transition font-medium">Get Started</button>
             </div>
         </div>
     </nav>
@@ -211,7 +242,7 @@
                         <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
                             <span class="text-white font-bold">BA</span>
                         </div>
-                        <h3 class="text-white font-bold text-lg">BAvix Ally Group</h3>
+                        <h3 class="text-white font-bold text-lg">Bavix Ally Group</h3>
                     </div>
                     <p class="text-gray-400 text-sm">
                         Your trusted partner in connecting talent with opportunity.
@@ -221,10 +252,10 @@
                 <div>
                     <h4 class="text-white font-semibold mb-4">Quick Links</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#home" class="hover:text-blue-400 transition">Home</a></li>
-                        <li><a href="#about" class="hover:text-blue-400 transition">About Us</a></li>
-                        <li><a href="#services" class="hover:text-blue-400 transition">Services</a></li>
-                        <li><a href="#careers" class="hover:text-blue-400 transition">Careers</a></li>
+                        <li><a href="index.html" class="hover:text-blue-400 transition">Home</a></li>
+                        <li><a href="about_us.html" class="hover:text-blue-400 transition">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-blue-400 transition">Services</a></li>
+                        <li><a href="careers.html" class="hover:text-blue-400 transition">Careers</a></li>
                     </ul>
                 </div>
                 
@@ -260,10 +291,10 @@
             </div>
             
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
-                <p>&copy; 2026 BAvix Ally Group. All rights reserved.</p>
+                <p>&copy; 2026 Bavix Ally Group. All rights reserved.</p>
                 <div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="#privacy" class="hover:text-blue-400 transition">Privacy Policy</a>
-                    <a href="#terms" class="hover:text-blue-400 transition">Terms & Conditions</a>
+                    <a href="privacy_policy.html" class="hover:text-blue-400 transition">Privacy Policy</a>
+                    <a href="terms_conditions.html" class="hover:text-blue-400 transition">Terms & Conditions</a>
                 </div>
             </div>
         </div>
