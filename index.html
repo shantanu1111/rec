@@ -62,9 +62,49 @@
             transform: translateY(-10px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
+
+         .pattern-bg {
+            background-color: #f9fafb;
+            background-image: 
+                repeating-linear-gradient(45deg, transparent, transparent 50px, rgba(10, 21, 80, 0.03) 50px, rgba(10, 21, 80, 0.03) 100px),
+                repeating-linear-gradient(-45deg, transparent, transparent 50px, rgba(59, 130, 246, 0.03) 50px, rgba(59, 130, 246, 0.03) 100px);
+        }
+        
+        .dotted-pattern {
+            background-color: #f9fafb;
+            background-image: 
+                radial-gradient(circle, rgba(10, 21, 80, 0.15) 2px, transparent 2px);
+            background-size: 40px 40px;
+        }
+        
+        .futuristic-bg {
+            background: linear-gradient(135deg, #f0f4ff 0%, #e6f0ff 25%, #ffffff 50%, #f0f9ff 75%, #e6f0ff 100%);
+            position: relative;
+        }
+        
+        .futuristic-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(147, 197, 253, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(191, 219, 254, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .grid-pattern {
+            background-image: 
+                linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(1, 10, 24, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 grid-pattern">
     <!-- Navigation -->
     <nav class="bg-white nav-shadow fixed w-full top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -141,7 +181,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="gradient-bg pt-32 pb-20 px-4 sm:px-6 lg:px-8 mt-20">
+    <section id="home" class="gradient-bg pt-32 pb-20 px-4 sm:px-6 lg:px-8 mt-20 ">
         <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="text-white fade-in">
@@ -307,7 +347,7 @@
     
 
     <!-- Job Categories Section -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 grid-pattern">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
@@ -428,7 +468,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8 gradient-bg">
+    <section class="py-20 px-4 sm:px-6 lg:px-8 gradient-bg ">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Hiring?
