@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - BAvix Ally Group</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .nav-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, #3b82f6, #60a5fa);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white nav-shadow fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">BA</span>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-800">BAvix Ally Group</h1>
+                        <p class="text-xs text-gray-500">Premier Recruiting Solutions</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 transition">Home</a>
+                    <a href="about.html" class="text-blue-600 font-semibold hover:text-blue-700 transition">About Us</a>
+                    <a href="services.html" class="text-gray-700 hover:text-blue-600 transition">Services</a>
+                    <a href="careers.html" class="text-gray-700 hover:text-blue-600 transition">Careers</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+                    <button class="bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 transition font-medium">Get Started</button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-4 space-y-3">
+                <a href="index.html" class="block text-gray-700 py-2">Home</a>
+                <a href="about.html" class="block text-blue-600 font-semibold py-2">About Us</a>
+                <a href="services.html" class="block text-gray-700 py-2">Services</a>
+                <a href="careers.html" class="block text-gray-700 py-2">Careers</a>
+                <a href="contact.html" class="block text-gray-700 py-2">Contact</a>
+                <button class="w-full bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 transition font-medium">Get Started</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg pt-32 pb-16 px-4 sm:px-6 lg:px-8 mt-20">
+        <div class="max-w-4xl mx-auto text-center text-white fade-in">
+            <h2 class="text-5xl md:text-6xl font-bold mb-6">
+                About BAvix Ally Group
+            </h2>
+            <p class="text-xl text-blue-100">
+                Connecting exceptional talent with outstanding opportunities since 2010
+            </p>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-4xl font-bold text-gray-800 mb-6">Our Story</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Founded in 2010, BAvix Ally Group began with a simple yet powerful mission: to bridge the gap between talented professionals and companies seeking exceptional team members. What started as a small recruiting firm has grown into a trusted partner for organizations across multiple industries.
+                    </p>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Over the years, we've successfully placed over 5,000 candidates and built lasting relationships with more than 500 partner companies. Our success is built on understanding that every placement is more than just filling a position—it's about creating meaningful connections that drive careers forward and help businesses thrive.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Today, we continue to innovate and evolve, leveraging cutting-edge technology and deep industry expertise to deliver unparalleled recruiting solutions. Our commitment remains unchanged: to be the ally you need in your talent acquisition journey.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-blue-50 p-6 rounded-xl">
+                        <h4 class="text-4xl font-bold text-blue-600 mb-2">14+</h4>
+                        <p class="text-gray-700 font-medium">Years of Excellence</p>
+                    </div>
+                    <div class="bg-green-50 p-6 rounded-xl">
+                        <h4 class="text-4xl font-bold text-green-600 mb-2">5000+</h4>
+                        <p class="text-gray-700 font-medium">Successful Placements</p>
+                    </div>
+                    <div class="bg-purple-50 p-6 rounded-xl">
+                        <h4 class="text-4xl font-bold text-purple-600 mb-2">500+</h4>
+                        <p class="text-gray-700 font-medium">Partner Companies</p>
+                    </div>
+                    <div class="bg-orange-50 p-6 rounded-xl">
+                        <h4 class="text-4xl font-bold text-orange-600 mb-2">98%</h4>
+                        <p class="text-gray-700 font-medium">Client Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission, Vision, Values Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Mission -->
+                <div class="bg-white p-8 rounded-2xl card-hover">
+                    <div class="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Our Mission</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        To empower organizations and professionals by creating meaningful connections that drive mutual success. We strive to be the most trusted partner in talent acquisition, delivering exceptional value through personalized service and innovative solutions.
+                    </p>
+                </div>
+
+                <!-- Vision -->
+                <div class="bg-white p-8 rounded-2xl card-hover">
+                    <div class="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Our Vision</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        To be the global leader in recruiting excellence, recognized for transforming how organizations build their teams and how professionals advance their careers. We envision a future where every placement creates lasting impact and drives innovation.
+                    </p>
+                </div>
+
+                <!-- Values -->
+                <div class="bg-white p-8 rounded-2xl card-hover">
+                    <div class="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Our Values</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Integrity, Excellence, Partnership, and Innovation guide everything we do. We believe in transparent communication, delivering exceptional results, building long-term relationships, and continuously improving our approach to serve you better.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                    Our <span class="gradient-text">Journey</span>
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Milestones that shaped who we are today
+                </p>
+            </div>
+
+            <div class="space-y-12">
+                <!-- 2010 -->
+                <div class="relative pl-8 timeline-item">
+                    <div class="absolute left-0 top-0 w-6 h-6 bg-blue-600 rounded-full -ml-3 border-4 border-white"></div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <span class="text-blue-600 font-bold text-sm">2010</span>
+                        <h4 class="text-xl font-bold text-gray-800 mt-1 mb-2">The Beginning</h4>
+                        <p class="text-gray-600">BAvix Ally Group was founded with a vision to revolutionize the recruiting industry through personalized service and innovative approaches.</p>
+                    </div>
+                </div>
+
+                <!-- 2013 -->
+                <div class="relative pl-8 timeline-item">
+                    <div class="absolute left-0 top-0 w-6 h-6 bg-blue-600 rounded-full -ml-3 border-4 border-white"></div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <span class="text-blue-600 font-bold text-sm">2013</span>
+                        <h4 class="text-xl font-bold text-gray-800 mt-1 mb-2">Expansion</h4>
+                        <p class="text-gray-600">Expanded our services to multiple industries including IT, healthcare, and finance, reaching 1,000 successful placements.</p>
+                    </div>
+                </div>
+
+                <!-- 2016 -->
+                <div class="relative pl-8 timeline-item">
+                    <div class="absolute left-0 top-0 w-6 h-6 bg-blue-600 rounded-full -ml-3 border-4 border-white"></div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <span class="text-blue-600 font-bold text-sm">2016</span>
+                        <h4 class="text-xl font-bold text-gray-800 mt-1 mb-2">Technology Integration</h4>
+                        <p class="text-gray-600">Launched our proprietary AI-powered candidate matching system, significantly improving placement accuracy and reducing time-to-hire.</p>
+                    </div>
+                </div>
+
+                <!-- 2019 -->
+                <div class="relative pl-8 timeline-item">
+                    <div class="absolute left-0 top-0 w-6 h-6 bg-blue-600 rounded-full -ml-3 border-4 border-white"></div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <span class="text-blue-600 font-bold text-sm">2019</span>
+                        <h4 class="text-xl font-bold text-gray-800 mt-1 mb-2">National Recognition</h4>
+                        <p class="text-gray-600">Awarded "Top Recruiting Firm of the Year" and reached 500+ partner companies milestone with 98% client satisfaction rate.</p>
+                    </div>
+                </div>
+
+                <!-- 2024 -->
+                <div class="relative pl-8 timeline-item">
+                    <div class="absolute left-0 top-0 w-6 h-6 bg-blue-600 rounded-full -ml-3 border-4 border-white"></div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <span class="text-blue-600 font-bold text-sm">2024 - Present</span>
+                        <h4 class="text-xl font-bold text-gray-800 mt-1 mb-2">Continued Growth</h4>
+                        <p class="text-gray-600">Celebrating 5,000+ successful placements and continuing to innovate with cutting-edge recruiting technologies and methodologies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                    Meet Our <span class="gradient-text">Leadership Team</span>
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Experienced professionals dedicated to your success
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Team Member 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden card-hover">
+                    <div class="h-64 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                        <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center">
+                            <svg class="w-20 h-20 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Sarah Mitchell</h3>
+                        <p class="text-blue-600 font-medium mb-3">CEO & Founder</p>
+                        <p class="text-gray-600 text-sm">15+ years of recruiting excellence, passionate about connecting talent with opportunity.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden card-hover">
+                    <div class="h-64 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+                        <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center">
+                            <svg class="w-20 h-20 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Michael Chen</h3>
+                        <p class="text-green-600 font-medium mb-3">Chief Operating Officer</p>
+                        <p class="text-gray-600 text-sm">Expertise in operations and technology, driving innovation in recruiting processes.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden card-hover">
+                    <div class="h-64 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
+                        <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center">
+                            <svg class="w-20 h-20 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Emily Rodriguez</h3>
+                        <p class="text-purple-600 font-medium mb-3">Director of Client Relations</p>
+                        <p class="text-gray-600 text-sm">Building lasting partnerships and ensuring exceptional client experiences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 gradient-bg">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Partner With Us?
+            </h2>
+            <p class="text-xl text-blue-100 mb-8">
+                Let's work together to achieve your talent acquisition goals
+            </p>
+            <button class="bg-white text-blue-600 px-10 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition hover-scale">
+                Get in Touch
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold">BA</span>
+                        </div>
+                        <h3 class="text-white font-bold text-lg">BAvix Ally Group</h3>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Your trusted partner in connecting talent with opportunity.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-blue-400 transition">Home</a></li>
+                        <li><a href="about.html" class="hover:text-blue-400 transition">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-blue-400 transition">Services</a></li>
+                        <li><a href="careers.html" class="hover:text-blue-400 transition">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>Email: info@bavixally.com</li>
+                        <li>Phone: +1 (555) 123-4567</li>
+                        <li>Address: 123 Business Ave, Suite 100</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+                <p>&copy; 2026 BAvix Ally Group. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#privacy" class="hover:text-blue-400 transition">Privacy Policy</a>
+                    <a href="#terms" class="hover:text-blue-400 transition">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    mobileMenu.classList.toggle('hidden');
+                    const expanded = mobileMenu.classList.contains('hidden') ? 'false' : 'true';
+                    mobileMenuBtn.setAttribute('aria-expanded', expanded);
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                        if (!mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                        }
+                    }
+                });
+
+                // Close menu when a link inside it is clicked
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
+
+            // Smooth scroll for internal anchors
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    if (href && href.startsWith('#') && href.length > 1) {
+                        const target = document.querySelector(href);
+                        if (target) {
+                            e.preventDefault();
+                            target.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+    </body>
+    </html>
