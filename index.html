@@ -102,6 +102,129 @@
                 linear-gradient(90deg, rgba(1, 10, 24, 0.03) 1px, transparent 1px);
             background-size: 60px 60px;
         }
+
+
+        .gradient-bg {
+            /* background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%); */
+            background: linear-gradient(135deg, #0A1550 0%, #0F1F74 50%, #3A4DBA 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Decorative patterns */
+        .gradient-bg::before {
+            content: '';
+            position: absolute;
+            top: 10%;
+            right: 5%;
+            width: 200px;
+            height: 200px;
+            border: 2px dashed rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        .gradient-bg::after {
+            content: '';
+            position: absolute;
+            bottom: 15%;
+            left: 8%;
+            width: 150px;
+            height: 150px;
+            border: 2px dashed rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite reverse;
+        }
+        
+        /* Additional pattern elements */
+        .pattern-circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.1;
+        }
+        
+        .pattern-1 {
+            top: 20%;
+            left: 10%;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        .pattern-2 {
+            top: 60%;
+            right: 15%;
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+            animation: pulse 5s ease-in-out infinite;
+        }
+        
+        .pattern-3 {
+            bottom: 10%;
+            right: 40%;
+            width: 60px;
+            height: 60px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Dotted path lines */
+        .dotted-line {
+            position: absolute;
+            border: none;
+            border-top: 2px dotted rgba(255, 255, 255, 0.2);
+        }
+        
+        .line-1 {
+            top: 25%;
+            left: 15%;
+            width: 150px;
+            transform: rotate(-15deg);
+        }
+        
+        .line-2 {
+            bottom: 30%;
+            right: 20%;
+            width: 120px;
+            transform: rotate(20deg);
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.1; }
+            50% { transform: scale(1.1); opacity: 0.2; }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body class="bg-gray-50 grid-pattern">
